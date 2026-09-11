@@ -690,6 +690,37 @@ address { font-style: normal; }
 .certificates__image img {
   width: 100%;
   height: auto;
+  display: block;
+
+  animation: certificateFloat 5s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+@keyframes certificateFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  25% {
+    transform: translateY(-15px) scale(1.005);
+    filter: blur(1px);
+  }
+
+  50% {
+    transform: translateY(0) scale(1.01);
+    filter: blur(0);
+  }
+
+  75% {
+    transform: translateY(5px) scale(1.005);
+    filter: blur(0.2px);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
 
 .certificates__content p {
@@ -809,7 +840,7 @@ address { font-style: normal; }
 .contacts__map {
   align-self: center;
   aspect-ratio: 4/3;
-  min-height: 400px;
+  min-height: 300px;
   background: var(--color-bg-card);
   overflow: hidden;
 }
