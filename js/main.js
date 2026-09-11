@@ -60,6 +60,27 @@
     '.contacts__map, .gallery__item'
   );
 
+  const floatingHero = document.querySelector('.floating__hero > img');
+
+if (floatingHero) {
+  const heroObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          heroObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  heroObserver.observe(floatingHero);
+}
+
   revealEls.forEach(el => el.classList.add('reveal'));
 
   const observer = new IntersectionObserver(
