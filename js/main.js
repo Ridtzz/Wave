@@ -26,6 +26,24 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+/* =================================================
+   PRELOADER
+================================================= */
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+
+  if (!preloader) return;
+
+  setTimeout(() => {
+    preloader.classList.add('preloader--hidden');
+
+    setTimeout(() => {
+      preloader.remove();
+    }, 900);
+  }, 800);
+});
+
 (function () {
   'use strict';
 
