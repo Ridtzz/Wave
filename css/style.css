@@ -224,6 +224,7 @@ address { font-style: normal; }
   color: var(--color-text);
   transition: opacity var(--transition);
   position: relative;
+  font-weight: 300;
 }
 
 .nav__link::after {
@@ -432,13 +433,6 @@ address { font-style: normal; }
   grid-row: span 2;
 }
 
-.about__img--main img {
-  min-height: 400px;
-}
-
-.about__img--secondary img {
-  min-height: 190px;
-}
 
 /* ===== Floating ===== */
 .floating {
@@ -1024,10 +1018,6 @@ address { font-style: normal; }
 
   .about__images {
     order: -1;
-  }
-
-  .about__img--main img {
-    min-height: 280px;
   }
 
   .floating__unique {
