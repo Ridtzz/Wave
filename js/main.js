@@ -35,14 +35,29 @@ window.addEventListener('load', () => {
 
   if (!preloader) return;
 
+  // Если preloader уже показывался в этой сессии —
+  // сразу убираем его
+  if (sessionStorage.getItem('wavePreloaderShown')) {
+    preloader.remove();
+    return;
+  }
+
+  // Запоминаем показ
+  sessionStorage.setItem('wavePreloaderShown', 'true');
+
+  // Ждём завершения волны
   setTimeout(() => {
     preloader.classList.add('preloader--hidden');
 
+    // После fade полностью удаляем элемент
     setTimeout(() => {
       preloader.remove();
-    }, 900);
-  }, 800);
+    }, 800);
+
+  }, 1500);
 });
+
+/* PRELOADER END */
 
 (function () {
   'use strict';
