@@ -1,3 +1,31 @@
+const lenis = new Lenis({
+  duration: 1.1,
+  smoothWheel: true,
+  smoothTouch: false,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => {
+    const target = document.querySelector(anchor.getAttribute('href'));
+
+    if (!target) return;
+
+    e.preventDefault();
+
+    lenis.scrollTo(target, {
+      offset: 0,
+      duration: 1.2,
+    });
+  });
+});
+
 (function () {
   'use strict';
 
