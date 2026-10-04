@@ -117,7 +117,7 @@ window.addEventListener('load', () => {
   const revealEls = document.querySelectorAll(
     '.section__header, .about__text, .about__images, .floating__card, ' +
     '.floating__unique, .details__list, .details__image, .fish__content, ' +
-    '.fish__images, .certificates__grid, .audience__list, .contacts__info, ' +
+    '.fish__images, .certificates__grid, .contacts__info, ' +
     '.contacts__map, .gallery__item'
   );
 
