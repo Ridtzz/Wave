@@ -23,7 +23,7 @@
   --header-h: 72px;
   --container: 1200px;
   --gap: clamp(1rem, 3vw, 2rem);
-  --section-pad: clamp(3rem, 8vw, 6rem);
+  --section-pad: clamp(3rem, 8vw, 7rem);
 
   --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -516,6 +516,7 @@ address { font-style: normal; }
 /* ===== Floating ===== */
 .floating {
   padding-top: 0;
+  padding-bottom: 3rem;
 }
 
 .floating__hero {
