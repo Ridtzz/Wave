@@ -656,6 +656,9 @@ address { font-style: normal; }
 }
 
 /* ===== Details ===== */
+.details {
+  padding: clamp(0rem, 4vw, 1rem);
+}
 .details__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
